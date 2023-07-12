@@ -1,0 +1,281 @@
+body {
+    background-color:#fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+}
+.menu-icon,.search-icon{
+    cursor: pointer;
+}
+.menu-bar {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    position: sticky;
+    flex-wrap: wrap;
+    border-radius:10px;
+    box-shadow:2px 5px 10px rgb(142 151 140);
+    align-items:self-start;
+    background:url("./hope house.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+
+.home img {
+    height: 32px;
+    width: 32px;
+    border-radius: 20px;
+    border: 2px solid whitesmoke;
+}
+
+.home {
+    list-style: none;
+    position:relative;
+    top: 2px;
+    right: 5px;
+}
+
+.left-bar {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100px;
+    justify-content: flex-start;
+    
+}
+
+.right-bar {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100px;
+    justify-content: flex-end;
+    margin-right: 20px;
+    /* align-self: flex-end; */
+}
+
+.left-child,
+.right-child {
+    display: flex;
+    margin: 0 3px 0 3px;
+    /* background: #fff; */
+    color: #fff;
+    justify-content: center;
+    padding: 5px;
+    font-family: "Times new roman" sans-serif;
+    font-weight: 500;
+    border: 1px solid rgb(214, 233, 210);
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px 1px rgb(174 174 174);
+}
+.left-child:hover,
+.right-child:hover{
+    background-color: rgb(172, 196, 167);
+    color:black;
+    font-weight: 600;
+    transition:all 0.8s ease;
+}
+.menu-bar a {
+    font-size: large;
+    text-decoration: none;
+    color: #fff;
+}
+.menu-icon,.search-icon{
+    color: #fff;
+}
+.Ddesc{
+    display: block;
+    height: 100px;
+    width:100px;
+    border: 2px solid white;
+    background: #fff;
+    box-shadow: 2px 5px 10px grey;
+    border-radius: 10px;
+    opacity: 75%;
+    text-align: center;
+    color: #1B1A1B;
+    position: absolute;
+    top:60px;
+    visibility: hidden;
+    padding-bottom: 5px;
+}
+
+.donatebutton:hover .Ddesc,.applybutton:hover .Ddesc,.helpbutton:hover .Ddesc{
+    visibility: visible;
+}
+.dropitems{
+    height: auto;
+    width:100px;
+    background: #fff;
+    box-shadow: 2px 5px 10px grey;
+    position: absolute;
+    top:60px;
+    background-color:#3b3a3b;
+    visibility: hidden;
+}
+.visible{
+    visibility: visible;
+}
+.dropitems li{
+    list-style-type: none;
+    margin-left:-40px ;
+}
+.dropitems li a{
+    color: #fff;
+    padding: 10px;
+    border-bottom:1px solid #1B1A1B;
+    display: block;
+    margin: 0;
+    padding-left:20px;
+}
+.container{
+    display: flex;
+}
+.side-bar{
+    background:#1B1A1B;
+    width: 300px;
+    left:-300px;
+    height:100vh;
+    position: absolute;
+    top:240px;
+    overflow-y: auto;
+    transition: 0.6s ease;
+    transition-property: left;
+    border-radius: 0 20px 10px 0; 
+}
+.side-bar.open{
+    left:0px;
+}
+.main-content {
+    display: flex;
+    height: 500px;
+    width:100%;
+    margin-top: 30px;
+    padding-left:10px;
+    padding-top:10px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    box-shadow: 3px 3px 15px hsl(0, 6%, 35%);
+    background-color: white;
+}
+.main-content {
+    margin-left: 0;
+    transition: margin-left 0.6s ease;
+  }
+.main-content.open {
+    margin-left: 300px;
+  }
+header img{
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    margin: 15px; 
+    margin-left:110px;
+    padding:2px ;
+    border:2px solid white;
+}
+header{
+background-color: #694cb6;
+}
+.close-btn{
+    position: absolute;
+    right:0;
+    color: #fff;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+header h1{
+    text-align: center;
+    color:#fff;
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+}
+.menu{
+    width:100%;
+    margin-top:15px;
+}
+.menu-items{
+    display: block;
+    align-content: baseline;
+    position:relative;
+    cursor: pointer;
+}
+.items{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 30px;
+    line-height: 20px;
+}
+.menu-items i{
+    margin-right: 10px;
+    /* padding-top: 10px; */
+    padding-left: 2px;
+    padding-right: 5px;
+}
+.menu-items .submenu{
+    background: #302e30;
+    padding-inline-start:20px ;
+}
+.dropdown{
+    position: absolute;
+    right:0;
+    margin: 20px;
+    transition: 0.3 ease;
+}
+.submenu{
+    display: none;
+}
+.submenu a{
+    color:#fff;
+    text-decoration: none;
+    padding-inline-start: 50px;
+    padding-top:5px;
+}
+.submenu1{
+    display: flex;
+    flex-direction: column;
+    margin:2px;
+}
+/* content adjust while clicking sidebar */
+
+/* for computer */
+/* for tablets */
+@media screen and (max-width:480px) {
+    .menu-bar {
+        display: flex;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .left-bar {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-right: 0;
+    }
+
+    .right-bar {
+        display: flex;
+        flex: 1 1 100px;
+    }
+}
+/* for mobiles */
+@media screen and(max-width:300px) {
+    .right-bar {
+        display: none;
+    }
+    body {
+        background: url("IMG_20230705_215752.jpg");
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
